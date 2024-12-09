@@ -1,6 +1,6 @@
 # File Sender
 
-This Rust project allows you to send a file to a specified remote server. The file is first encoded, compressed, and then transmitted with custom headers to the server. With a python server.py, it will decompress, decode and save bytes into new file.
+This Rust project allows you to send a file to a specified remote server (I use ngrok as a proxy to forward file to my local listener). The file is first encoded, compressed, and then transmitted with custom headers to the server chunk by chunk. With a python server.py, it will decompress, decode and save bytes into new file.
 ## Installation
 ### Prerequisites
 
@@ -64,8 +64,10 @@ To build a Windows executable on Kali Linux, follow these steps:
 
 Run listening server on remote machine:
 ```bash
+ngrok http 8888
 python3 server.py
 ```
+***Note: I use ngrok as a proxy, then the remote http server here should be ngrok when you start it. ngrok will automatically push file to your local machine which run server.py listener. Besides, default port of server.py is 8888, ngrok should be run with this port***
 
 To run the application on local, use the following command:
 
